@@ -1,20 +1,121 @@
+/* ====== GLOBAL STYLES ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  background-color: #1a1a1a; /* Softer black */
+  color: #ccc; /* Softer text */
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  flex: 1; /* Pushes footer down if content is short */
+}
+
 /* ====== NAVIGATION ====== */
 nav {
   background: #1a1a1a;
-  border-bottom: none; /* Remove solid line */
-  border-image: none;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 0;
   border-bottom: 3px solid transparent;
   border-image: linear-gradient(to right, #c76d3d, #d87a4a, #c76d3d);
   border-image-slice: 1;
 }
 
-/* ====== FOOTER ====== */
-footer {
-  background: #1a1a1a;
-  color: #999;
-  border-top: none; /* Remove solid line */
-  border-image: none;
-  border-top: 3px solid transparent;
-  border-image: linear-gradient(to right, #c76d3d, #d87a4a, #c76d3d);
-  border-image-slice: 1;
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
 }
+
+nav a {
+  color: #e5e5e5;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #d87a4a;
+}
+
+/* ====== HERO ====== */
+.hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #d87a4a; /* Muted orange */
+}
+
+.hero p {
+  max-width: 600px;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background: #d87a4a;
+  color: #1a1a1a;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background: #e18d5f; /* Slightly lighter muted orange */
+  color: #1a1a1a;
+}
+
+/* ====== GRID ====== */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.gallery-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* ====== PROJECT CARDS ====== */
+.card {
+  background: #222; /* Slightly lighter than*
