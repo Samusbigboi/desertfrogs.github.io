@@ -10,7 +10,11 @@ body {
 /* ====== NAVIGATION ====== */
 nav {
   background: #1a1a1a;
-  border-bottom: 2px solid #d87a4a; /* Muted orange border */
+  border-bottom: none; /* Remove solid line */
+  border-image: none;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(to right, #c76d3d, #d87a4a, #c76d3d);
+  border-image-slice: 1;
 }
 
 nav a {
@@ -72,5 +76,9 @@ nav a:hover {
 footer {
   background: #1a1a1a;
   color: #999;
-  border-top: 2px solid #d87a4a;
+  border-top: none; /* Remove solid line */
+  border-image: none;
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(to right, #c76d3d, #d87a4a, #c76d3d);
+  border-image-slice: 1;
 }
