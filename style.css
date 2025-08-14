@@ -1,12 +1,3 @@
-body {
-  display: flex;
-  flex-direction: column;
-  font-family: 'Inter', sans-serif;
-  background-color: #1a1a1a; /* Softer black */
-  color: #ccc; /* Softer text */
-  line-height: 1.6;
-}
-
 /* ====== NAVIGATION ====== */
 nav {
   background: #1a1a1a;
@@ -15,61 +6,6 @@ nav {
   border-bottom: 3px solid transparent;
   border-image: linear-gradient(to right, #c76d3d, #d87a4a, #c76d3d);
   border-image-slice: 1;
-}
-
-nav a {
-  color: #e5e5e5;
-}
-
-nav a:hover {
-  color: #d87a4a;
-}
-
-/* ====== HERO ====== */
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: #d87a4a; /* Muted orange */
-}
-
-.hero p {
-  max-width: 600px;
-  margin-bottom: 2rem;
-  color: #ccc;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.7rem 1.5rem;
-  background: #d87a4a;
-  color: #1a1a1a;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.btn:hover {
-  background: #e18d5f; /* Slightly lighter muted orange */
-  color: #1a1a1a;
-}
-
-/* ====== PROJECT CARDS ====== */
-.card {
-  background: #222; /* Slightly lighter than background for separation */
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-.card h3 {
-  margin-bottom: 0.5rem;
-  color: #d87a4a;
-}
-
-.card p {
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-  color: #bbb;
 }
 
 /* ====== FOOTER ====== */
