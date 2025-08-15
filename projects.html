@@ -17,23 +17,36 @@
     </ul>
   </nav>
 
-  <div class="container" style="padding:2rem 0;">
-    <h1>IT Projects</h1>
-    <p>This page is yet to be planned further.<br>
-       I'll probably post some scripts, or maybe some of my Linux configs, or small guides. <br>
-      <br>
-    </p>
-    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-      <div class="card">
-        <h3>Project One</h3>
-        <p>Lorem Ipsum.</p>
-      </div>
-      <div class="card">
-        <h3>Project Two</h3>
-        <p>Lorem Ipsum.</p>
-      </div>
-    </div>
-  </div>
+<section class="projects container">
+  <h1>IT Projects</h1>
+
+  <article class="project">
+    <h2>Backup Script</h2>
+    <p>This Bash script automates daily backups to an external drive.</p>
+    <pre><code class="language-bash">
+#!/bin/bash
+SRC="/home/user/data"
+DEST="/mnt/backup"
+rsync -av --delete "$SRC" "$DEST"
+    </code></pre>
+  </article>
+
+  <article class="project">
+    <h2>Python Web Scraper</h2>
+    <p>A simple Python script to scrape headlines from a news site.</p>
+    <pre><code class="language-python">
+import requests
+from bs4 import BeautifulSoup
+
+url = "https://example.com"
+html = requests.get(url).text
+soup = BeautifulSoup(html, "html.parser")
+for h in soup.find_all("h2"):
+    print(h.text)
+    </code></pre>
+  </article>
+</section>
+
 
   <footer>
     © 2025 Wilmer Nyman | All Rights Reserved
