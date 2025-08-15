@@ -25,28 +25,92 @@
   <h1>IT Projects</h1>
 
   <article class="project">
-    <h2>Backup Script</h2>
-    <p>This Bash script automates daily backups to an external drive.</p>
-    <pre><code class="language-bash">
-#!/bin/bash
-SRC="/home/user/data"
-DEST="/mnt/backup"
-rsync -av --delete "$SRC" "$DEST"
+    <h2>Python - systemmonitoring-test </h2>
+    <p>First part of a python script for uni course</p>
+    <pre><code class="language-python">
+import systemmonitoring
+
+# for-loop to get address as well as port
+for address, port in [("www.his.se", 80), ("142.250.74.174", 80), ("127.0.0.53", 80)]:
+    resultofprobing = systemmonitoring.probetcpport(address, port)
+
+    print("Probing", address, "on port", port)
+
+    # if a connection, based on "systemmonitoring.py", is a success, print this
+    if resultofprobing == True:
+        print("probing", address, "on port", port, "success")
+
+    # if a connection, based on "systemmonitoring.py", failed, print this
+    elif resultofprobing == False:
+        print("probing", address, "on port", port, "fail")
+    </code></pre>
+  </article>
+
+    <article class="project">
+    <h2>Python - systemmonitoring </h2>
+    <p>Second part of a python script for uni course</p>
+    <pre><code class="language-python">
+import socket
+
+# based on systemmonitoring-test, connects to address and port
+      
+def probetcpport(address, portnumber):
+    try:
+        socket.create_connection((address, portnumber))
+        return True
+    except:
+        return False
     </code></pre>
   </article>
 
   <article class="project">
-    <h2>Python Web Scraper</h2>
+    <h2>Python - regex</h2>
+    <p>A simple Python script for uni course.</p>
+    <pre><code class="language-python">
+
+from ast import Break
+import re
+
+def lookslikelogin(input):
+    if(len(input) != 8):
+        return False
+
+    regex = "[a][0-9][0-9][a-z]{5}"
+
+    isamatch = re.search(regex, input)
+
+    if(isamatch):
+        return True
+    else:
+        return False
+
+while True:
+    print("entry login name: ", )
+    userinput = input()
+    if(userinput == ""):
+        break
+    if(lookslikelogin(userinput.strip()) == False):
+        print("input '", userinput.strip(),
+              "' does not look like a student login :(")
+    elif(lookslikelogin(userinput.strip())):
+        print("input '", userinput.strip(), "' looks like a student login :)")
+    </code></pre>
+  </article>
+</section>
+
+    <article class="project">
+    <h2>Python system monitoring</h2>
     <p>A simple Python script to scrape headlines from a news site.</p>
     <pre><code class="language-python">
-import requests
-from bs4 import BeautifulSoup
+import socket
 
-url = "https://example.com"
-html = requests.get(url).text
-soup = BeautifulSoup(html, "html.parser")
-for h in soup.find_all("h2"):
-    print(h.text)
+def probetcpport(address, portnumber):
+    try:
+        # based on systemmonitoring-test, connects to address and port
+        socket.create_connection((address, portnumber))
+        return True
+    except:
+        return False
     </code></pre>
   </article>
 </section>
