@@ -84,7 +84,25 @@ $ docker ps
     <summary>NixOS - Connect N8N to Google Drive</summary>
     <p>This guide helps you connect your n8n to various Google Drive APIs...</p>
     <pre><code class="language-bash">
-Prepare your n8n app, and pause during the step where you are prompted to connect...
+Prepare your n8n app, and paus during the step where you are prompted to connect to your Google Cloud API.
+
+Go to Google Cloud Platform: Cloud Computing Services > login to relevant Google account.
+
+Click on "Console" up on the right corner > Click on "Select a project" on up on the left corner
+      > Click on "New Project" > Name it > create.
+
+Go to the project, either through notification or "Select a project".
+
+Open hamburger menu in top left > Click "APIs & Services" > Library > search for "google drive" > Enable.
+
+On the left side-menu, go to "OAuth consent screen" > Get started 
+      > Follow the wizard - use whatever credentials fit your project.
+
+Go to the "Audience" tab on the left > "Publish app".
+      
+Go back to home > "APIs & Services" > "Credentials" > "+ Create credentials" - "OAuth client ID 
+      > "Aplication Type" - Web application > Fill in name field > Under "Authorized redirect URIs" - "+ Add URI" 
+      > paste the URI (found on the n8n API connection page) > (YET TO FINISH WRITING GUIDE)
     </code></pre>
   </details>
 </section>
