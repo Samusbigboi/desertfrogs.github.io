@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - n8n Projects</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="projects.html" class="active">IT Projects</a></li>
+    </ul>
+  </nav>
+
+<section class="projects container">
+  <h1>n8n projects</h1>
+  <p>This page is dedicated do different projects in N8N, which is a powerful tool used for automation.</p>
+  
+  <article class="project">
+    <h2>NixOS - Connect N8N to Google Drive </h2>
+    <p>This guide helps you connect your n8n to various Google Drive APIs, such as sheets, gmail, calendar. This is needed in order to automate
+    various workflows, such as creating sheets and/or appending table rows o an existing sheet. It can also see and/or create various events on your calendar.</p>
+    <pre><code class="language-nix">
+Prepare your n8n app, and paus during the step where you are prompted to connect to your Google Cloud API:
+
+Go to Google Cloud Platform: Cloud Computing Services
+Click on "Console" up on the right corner
+Click on "Select a project" on up on the left corner
+click on "New Project"
+Name it > create
+Go to the project, either through notification or "Select a project"
+Open hamburger menu in top left
+Click "APIs & Services" > Library > search for "google drive" > Enable
+On the left, go to "OAuth consent screen" > Get started
+Follow the wizard - use whatever credentials fit your project
+Go to the "Audience" tab on the left > "Publish app"
+Go back to home > "APIs & Services" > "Credentials" > "+ Create credentials" - "OAuth client ID > "Aplication Type" - Web application > Fill in name field > Under "Authorized redirect URIs" - "+ Add URI" > paste the URI (found on the n8n API connection page) > (HAVE NOT FINISHED)  
+
+    </code></pre>
+  </article>
+
+
+
+  
+</section>
+
+
+  <footer>
+    © 2025 Wilmer Nyman | All Rights Reserved
+  </footer>
+
+</body>
+</html>
