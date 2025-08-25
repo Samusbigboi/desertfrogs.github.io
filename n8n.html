@@ -36,16 +36,16 @@
     <br>
     <p>1. Edit your /etc/nixos/configuration.nix</p>
     <pre><code class="language-nix"> 
-      {
-        virtualisation.docker.enable = true;
+{
+  virtualisation.docker.enable = true;
 
-        # Or add "docker" in your already existing "extraGroups" list, if you want sudo access
-        users.users.<your-username>.extraGroups = [ "docker" ];
-      }
+  # Or add "docker" in your already existing "extraGroups" list, if you want sudo access
+  users.users.<your-username>.extraGroups = [ "docker" ];
+}
     </code></pre>
     <p>bash:</p>
     <pre><code class="language-nix">
-      $ sudo nixos-rebuild switch
+$ sudo nixos-rebuild switch
     </code></pre>
     <br>
 
@@ -53,19 +53,19 @@
     <p>2. Create a folder for n8n’s data</p>
     <p>bash:</p>
     <pre><code class="language-nix">
-       $ mkdir -p ~/.n8n
+$ mkdir -p ~/.n8n
     </code></pre>
     <p>Run n8n, bash:</p>
     <p>(reminder that it is important to include the \ in each line, otherwise it will run the commands prematurely)</p>
     <pre><code class="language-nix">
-       $ docker run -it --rm \
-        --name n8n \
-        -p 5678:5678 \
-        -v ~/.n8n:/home/node/.n8n \
-        n8nio/n8n
+$ docker run -it --rm \
+--name n8n \
+-p 5678:5678 \
+-v ~/.n8n:/home/node/.n8n \
+n8nio/n8n
 
-      # "-p 5678:5678" exposes the editor on http://localhost:5678
-      # "-v ~/.n8n:/home/node/.n8n" mounts a persistent volume so your workflows survive container restarts
+# "-p 5678:5678" exposes the editor on http://localhost:5678
+# "-v ~/.n8n:/home/node/.n8n" mounts a persistent volume so your workflows survive container restarts
     </code></pre>
     <p>You can now visit your n8n environment at http://localhost:5678 in your browser</p>
     <br>
@@ -75,6 +75,8 @@
     <p>Create a directory for your setup, bash:</p>
     <pre><code class="language-nix">
       $ mkdir -p ~/n8n-docker
+
+      # move to the new directory
       $ cd ~/n8n-docker
     </code></pre>
     <p>Create a docker-compose.yml file:</p>
