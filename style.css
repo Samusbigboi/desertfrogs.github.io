@@ -96,16 +96,28 @@ nav a:hover { color: #d87a4a; }
 /* ====== GRIDS ====== */
 .grid { display: grid; gap: 1.5rem; }
 
-.gallery-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+/* ====== GALLERY ====== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
 
 .gallery-grid img {
   width: 100%;
-  display: block;
+  height: 220px;
+  object-fit: cover;
   border-radius: 10px;
-  transition: transform 0.25s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-.gallery-grid img:hover { transform: scale(1.02); }
+.gallery-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+}
+
 
 /* ====== PROJECT CARDS ====== */
 .projects {
