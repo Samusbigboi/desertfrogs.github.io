@@ -74,12 +74,12 @@ n8nio/n8n
     <p>3. Keep it running in the background, autorun when rebooting machine</p>
     <p>Create a directory for your setup, bash:</p>
     <pre><code class="language-nix">
-      $ mkdir -p ~/n8n-docker
+$ mkdir -p ~/n8n-docker
 
-      # move to the new directory
-      $ cd ~/n8n-docker
+# move to the new directory
+$ cd ~/n8n-docker
     </code></pre>
-    <p>Create a docker-compose.yml file:</p>
+    <p>Create a docker-compose.yml file in ~/n8n-docker:</p>
     <pre><code class="language-nix">
 services:
   n8n:
@@ -93,13 +93,15 @@ services:
 
     <p>If you need to start n8n for some reason, run this bash command:</p>
     <pre><code class="language-nix">
-      $ docker compose up -d
+$ docker compose up -d
     </code></pre>
 
     <p>To check if docker is running:</p>
     <pre><code class="language-nix">
-      $ docker ps
+$ docker ps
     </code></pre>
+    <br>
+    <p>If done correctly, your n8n is hosted and run through docker, and should start automatically with your machine. This exact setup works for my NixOS 24.11</p>
     
   </article>
   
