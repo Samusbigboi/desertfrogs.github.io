@@ -9,9 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-nix.min.js"></script>
-
 </head>
 <body>
 
@@ -27,62 +25,45 @@
 
 <section class="projects container">
   <h1>n8n projects</h1>
-  <p>This page is dedicated do different projects in N8N, which is a powerful tool used for automation.</p>
+  <p>This page is dedicated to different projects in N8N, which is a powerful tool used for automation.</p>
   
-  <!-- Part 1 -->
-  <article class="project">
-    <h2>NixOS - Self host n8n, using Docker</h2>
-    <p>This is how I have set up my private n8n environment, hosted on my NixOS desktop machine. <br>
-    It is possible, and in most cases prefered, to host your n8n on a server. That could be either remote or local, depending on your setup. <br>
-    In my case, I just run it on my private computer for personal purposes.</p>
-    <br>
+  <!-- Project 1 -->
+  <details class="project">
+    <summary>NixOS - Self host n8n, using Docker</summary>
+    <p>This is how I have set up my private n8n environment, hosted on my NixOS desktop machine...</p>
+
     <p>1. Edit your /etc/nixos/configuration.nix</p>
     <pre><code class="language-nix"> 
 {
   virtualisation.docker.enable = true;
-
-  # Or add "docker" in your already existing "extraGroups" list, if you want sudo access
-  users.users.<your-username>.extraGroups = [ "docker" ];
+  users.users.&lt;your-username&gt;.extraGroups = [ "docker" ];
 }
     </code></pre>
     <p>bash:</p>
-    <pre><code class="language-nix">
+    <pre><code class="language-bash">
 $ sudo nixos-rebuild switch
     </code></pre>
-    <br>
 
-      <!-- Part 2 -->
     <p>2. Create a folder for n8n’s data</p>
-    <p>bash:</p>
-    <pre><code class="language-nix">
+    <pre><code class="language-bash">
 $ mkdir -p ~/.n8n
     </code></pre>
-    <p>Run n8n, bash:</p>
-    <p>(reminder that it is important to include the \ in each line, otherwise it will run the commands prematurely)</p>
-    <pre><code class="language-nix">
+
+    <p>Run n8n:</p>
+    <pre><code class="language-bash">
 $ docker run -it --rm \
 --name n8n \
 -p 5678:5678 \
 -v ~/.n8n:/home/node/.n8n \
 n8nio/n8n
-
-# "-p 5678:5678" exposes the editor on http://localhost:5678
-# "-v ~/.n8n:/home/node/.n8n" mounts a persistent volume so your workflows survive container restarts
     </code></pre>
-    <p>You can now visit your n8n environment at http://localhost:5678 in your browser</p>
-    <br>
 
-    <!-- Part 3 -->
-    <p>3. Keep it running in the background, autorun when rebooting machine</p>
-    <p>Create a directory for your setup, bash:</p>
-    <pre><code class="language-nix">
+    <p>3. Keep it running in the background</p>
+    <pre><code class="language-bash">
 $ mkdir -p ~/n8n-docker
-
-# move to the new directory
 $ cd ~/n8n-docker
     </code></pre>
-    <p>Create a docker-compose.yml file in ~/n8n-docker:</p>
-    <pre><code class="language-nix">
+    <pre><code class="language-yaml">
 services:
   n8n:
     image: n8nio/n8n
@@ -92,49 +73,21 @@ services:
     volumes:
       - ~/.n8n:/home/node/.n8n
     </code></pre>
-
-    <p>If you need to start n8n for some reason, run this bash command:</p>
-    <pre><code class="language-nix">
+    <pre><code class="language-bash">
 $ docker compose up -d
-    </code></pre>
-
-    <p>To check if docker is running:</p>
-    <pre><code class="language-nix">
 $ docker ps
     </code></pre>
-    <br>
-    <p>If done correctly, your n8n is hosted and run through docker, and should start automatically with your machine. This exact setup works for my NixOS 24.11</p>
-    
-  </article>
+  </details>
   
-  <article class="project">
-    <h2>NixOS - Connect N8N to Google Drive </h2>
-    <p>This guide helps you connect your n8n to various Google Drive APIs, such as sheets, gmail, calendar. This is needed in order to automate
-    various workflows, such as creating sheets and/or appending table rows o an existing sheet. It can also see and/or create various events on your calendar.</p>
-    <pre><code class="language-nix">
-      Prepare your n8n app, and paus during the step where you are prompted to connect to your Google Cloud API:
-
-      Go to Google Cloud Platform: Cloud Computing Services
-      Click on "Console" up on the right corner
-      Click on "Select a project" on up on the left corner
-      click on "New Project"
-      Name it > create
-      Go to the project, either through notification or "Select a project"
-      Open hamburger menu in top left
-      Click "APIs & Services" > Library > search for "google drive" > Enable
-      On the left, go to "OAuth consent screen" > Get started
-      Follow the wizard - use whatever credentials fit your project
-      Go to the "Audience" tab on the left > "Publish app"
-      Go back to home > "APIs & Services" > "Credentials" > "+ Create credentials" - "OAuth client ID > "Aplication Type" - Web application > Fill in name field > Under "Authorized redirect URIs" - "+ Add URI" > paste the URI (found on the n8n API connection page) > (HAVE NOT FINISHED)  
-
+  <!-- Project 2 -->
+  <details class="project">
+    <summary>NixOS - Connect N8N to Google Drive</summary>
+    <p>This guide helps you connect your n8n to various Google Drive APIs...</p>
+    <pre><code class="language-bash">
+Prepare your n8n app, and pause during the step where you are prompted to connect...
     </code></pre>
-  </article>
-
-
-
-  
+  </details>
 </section>
-
 
   <footer>
     © 2025 Wilmer Nyman | All Rights Reserved
