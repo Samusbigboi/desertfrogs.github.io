@@ -168,3 +168,50 @@ footer::before {
   left: 0;
   right: 0;
 }
+
+/* ====== PROJECT CARDS (collapsible) ====== */
+.projects {
+  padding: 2rem 0;
+}
+
+.projects h1 {
+  margin-bottom: 1rem;
+  color: #d87a4a;
+}
+
+.project {
+  margin-bottom: 1.5rem;
+  background: #222;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.project summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #e18d5f;
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+
+.project summary::marker {
+  display: none; /* remove default triangle */
+}
+
+.project summary::after {
+  content: "➕";
+  float: right;
+  transition: transform 0.2s ease;
+}
+
+.project[open] summary::after {
+  content: "➖";
+}
+
+.project p {
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
