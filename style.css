@@ -215,3 +215,44 @@ footer::before {
   color: #ccc;
 }
 
+/* ====== ABOUT PAGE ====== */
+.about-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.about-text h1 {
+  color: #d87a4a;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+.about-details {
+  padding: 2rem 0;
+}
+
+.about-details h2 {
+  color: #e18d5f;
+  margin-bottom: 1rem;
+}
+
+.about-details p {
+  margin-bottom: 1rem;
+  color: #ccc;
+  max-width: 800px;
+}
