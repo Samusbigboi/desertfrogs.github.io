@@ -2,30 +2,120 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Desert Frogs - A Dev Blog</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <nav>
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="projects.html">IT Projects</a></li>
-      <li><a href="n8n.html">n8n Projects</a></li>
-    </ul>
-  </nav>
+<div id="wrapper">
 
-  <section class="hero">
-    <h1>Hi, I'm Wilmer Nyman</h1>
-    <p>I create things.</p>
-  </section>
+  <!-- Header Banner -->
+  <div id="header">
+    <div id="header-title">
+      <span class="site-title">&#127385; Desert Frogs</span>
+      <span class="site-sub">a personal corner of the internet</span>
+    </div>
+    <div id="header-nav">
+      <a href="index.html">Home</a> |
+      <a href="game.html">Game Dev</a> |
+      <a href="it.html">IT Projects</a> |
+      <a href="about.html">About</a>
+    </div>
+  </div>
 
-  <footer>
-    © 2025 Wilmer Nyman | All Rights Reserved
-  </footer>
+  <!-- Main layout: sidebar + content -->
+  <div id="main">
+
+    <!-- Left Sidebar -->
+    <div id="sidebar">
+
+      <div class="side-box">
+        <div class="side-box-title">Navigate</div>
+        <ul>
+          <li><a href="index.html">&#9658; Home</a></li>
+          <li><a href="game.html">&#9658; Game Dev Log</a></li>
+          <li><a href="it.html">&#9658; IT Projects</a></li>
+          <li><a href="about.html">&#9658; About Me</a></li>
+        </ul>
+      </div>
+
+      <div class="side-box">
+        <div class="side-box-title">Site Info</div>
+        <p>Owner: Wilmer</p>
+        <p>Host: GitHub Pages</p>
+        <p>Updated:<br>2026-06-29</p>
+      </div>
+
+      <div class="side-box">
+        <div class="side-box-title">Tags</div>
+        <p>
+          <a href="#">gamedev</a><br>
+          <a href="#">godot</a><br>
+          <a href="#">linux</a><br>
+          <a href="#">networking</a><br>
+          <a href="#">homelab</a>
+        </p>
+      </div>
+
+      <div class="side-box">
+        <div class="side-box-title">Elsewhere</div>
+        <p>
+          <a href="https://github.com/Samusbigboi/">GitHub</a><br>
+          <a href="https://desertfrogs.itch.io/hollow-crown">itch.io</a>
+        </p>
+      </div>
+
+    </div><!-- /sidebar -->
+
+    <!-- Main Content -->
+    <div id="content">
+
+      <div class="content-box">
+        <div class="content-box-title">Welcome to Desert Frogs</div>
+        <p>
+          Hello and welcome. This is my small piece of the web where I write about whatever
+          I happen to be working on. Right now that's mostly an indie game I'm building,
+          plus the occasional IT/homelab rabbit hole.
+        </p>
+        <p>
+          The name? Desert frogs are creatures that wait underground for years, then burst
+          out all at once when conditions are right. That's pretty much how my projects work.
+        </p>
+      </div>
+
+      <div class="content-box">
+        <div class="content-box-title">Latest Posts</div>
+
+        <div class="post-entry">
+          <div class="post-meta">2026-06-29 &mdash; <span class="post-tag">[game dev]</span></div>
+          <div class="post-title"><a href="game.html">Starting the devlog &mdash; what is this game anyway?</a></div>
+          <p>I've been working on a small game for a few months now and figured it was time to start writing about it publicly. Here's the pitch and where I'm at...</p>
+          <a href="game.html" class="read-more">[read more]</a>
+        </div>
+
+        <hr class="post-divider">
+
+        <div class="post-entry">
+          <div class="post-meta">2026-06-15 &mdash; <span class="post-tag">[it]</span></div>
+          <div class="post-title"><a href="it.html">Python scripts</a></div>
+          <p>A few python scripts made for a scripting course at university...</p>
+          <a href="it.html" class="read-more">[read more]</a>
+        </div>
+
+      </div><!-- /content-box -->
+
+    </div><!-- /content -->
+
+  </div><!-- /main -->
+
+  <!-- Footer -->
+  <div id="footer">
+    &copy; 2026 Desert Frogs &mdash; desertfrogs.com &mdash;
+    Wilmer Nyman
+  </div>
+
+</div><!-- /wrapper -->
 
 </body>
 </html>

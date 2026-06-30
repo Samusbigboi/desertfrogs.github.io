@@ -2,66 +2,97 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Dev Log - Desert Frogs</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="projects.html">IT Projects</a></li>
-      <li><a href="n8n.html">n8n Projects</a></li>
-       <li><a href="about.html" class="active">Game</a></li>
-    </ul>
-  </nav>
+<div id="wrapper">
 
-  <!-- INTRO -->
-  <section class="about-intro container">
-    <div class="about-text">
-      <h1>The Game Project</h1>
-      <p>
-        Heavily inspired by the King's Field and Shadow Tower series by FromSoftware, with King's Field being their first ever game.
-        This project is done solo by me using Godot as the engine, and Blender for all 3D.
-      </p>
+  <div id="header">
+    <div id="header-title">
+      <span class="site-title">&#127385; Desert Frogs</span>
+      <span class="site-sub">a personal corner of the internet</span>
     </div>
-    <div class="about-image">
-      <img src="images/screenshot2" alt="Portrait of Wilmer Nyman">
+    <div id="header-nav">
+      <a href="index.html">Home</a> |
+      <a href="game.html">Game Dev</a> |
+      <a href="it.html">IT Projects</a> |
+      <a href="about.html">About</a>
     </div>
-  </section>
+  </div>
 
-  <!-- DETAILS -->
-  <section class="about-details container">
-    <h2>Not a programmer</h2>
-    <p>
-      I don't consider myself a programmer. I can't write my own code. However, like many others, I'm able to frankenstein myself through the code. <br>
-      Having a vision, and understanding for the most part what the code means really helps. I know somewhat how the systems and mechanics would be structured, <br>
-      and I know what scope is too big for me at the moment. So looking for what I want, YouTube and various forum posts is how I do it. <br>
-      However, I need to figure out how to make different systems work with each other, and that's always a fun puzzle to complete. it gives me a great feeling of accomplishment. <br>
-      The easier part would be to find a programmer that would do it for me, and I could focus on the visuals, which is what i want to do, but then I'll have to adapt to someone else. <br>
-    </p>
-    <div class="about-image">
-      <img src="images/screenshot1" alt="Portrait of Wilmer Nyman">
+  <div id="main">
+
+    <div id="sidebar">
+
+      <div class="side-box">
+        <div class="side-box-title">Navigate</div>
+        <ul>
+          <li><a href="index.html">&#9658; Home</a></li>
+          <li><a href="game.html">&#9658; Game Dev Log</a></li>
+          <li><a href="it.html">&#9658; IT Projects</a></li>
+          <li><a href="about.html">&#9658; About Me</a></li>
+        </ul>
+      </div>
+
+      <div class="side-box">
+        <div class="side-box-title">The Game</div>
+        <p>
+          Engine: Bevy<br>
+          Genre: First-person Action RPG<br>
+          Status: Early Dev<br>
+          Platform: TBD
+        </p>
+      </div>
+
+      <div class="side-box">
+        <div class="side-box-title">Tags</div>
+        <p>
+          <a href="#">gamedev</a><br>
+          <a href="#">bevy</a><br>
+          <a href="#">devlog</a><br>
+          <a href="#">indiegame</a>
+        </p>
+      </div>
+
     </div>
-    <p>
-      I was contemplating using other engines, such as Unity, or Unreal.. But the UX of Unity is horrendous, and Unreal is a bloated piece of crap. <br>
-      Using Linux, specifically NixOS, also played a big role. Unreal is a pain to get working properly, and Unity is just out of the question in the first place. <br>
-      Godot is a lot more narrow in what it can do, so there are way less crap to waddle through for my simple project. <br>
-      I'm also thinking about switching over to the engine that King's Field used, which is Sword of Moonlight, but maybe for my next project.
-    </p>
-    <div class="about-image">
-      <img src="images/screenshot3" alt="Portrait of Wilmer Nyman">
+
+    <div id="content">
+
+      <div class="content-box">
+        <div class="content-box-title">Game Dev Log</div>
+
+        <p class="page-intro">
+          This is where I document the development of my game. Expect long gaps between
+          posts and sudden bursts of activity. That's just how it goes. Work and other personal stuff takes a lot of time and space, you know.
+        </p>
+
+        <div class="article">
+          <div class="date">2026-06-29</div>
+          <h2>Starting the devlog &mdash; what is this game anyway?</h2>
+          <p>
+            I've been quietly working on this game for a while. It started as a small
+            experiment and kept growing. Time to write about it and document the process, while taking use of my domain.
+          </p>
+          <p>
+            This should be a good first post for now.
+          </p>
+        </div>
+
+      </div>
+
     </div>
 
+  </div>
 
-  
+  <div id="footer">
+    &copy; 2026 Desert Frogs &mdash; desertfrogs.com &mdash;
+    Wilmer Nyman
+  </div>
 
-  <footer>
-    © 2025 Wilmer Nyman | All Rights Reserved
-  </footer>
+</div>
 
 </body>
 </html>

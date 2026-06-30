@@ -1,0 +1,4 @@
+# GitHub Pages config
+# No Jekyll processing needed - this is plain HTML
+exclude:
+  - "*.md"
